@@ -1,0 +1,21 @@
+prompt = """
+il tuo compito è di rispondere con un tono {tone_of_voice} all'utente.
+Dovrai restituire la risposta testuale e una valutazione sull'umore di chi ti scrive
+
+Questa è la richiesta
+{richiesta_utente}
+"""
+
+[model]
+provider="openai"
+[model.config]
+api_key="{{OPENAI_API_KEY}}"
+model="gpt-4o-mini"
+temperature = 1
+max_tokens = 8192
+
+[model.memory]
+session_id="my_session"
+token_limit=40000
+chat_history_token_ratio=0.7
+token_flush_size=3000

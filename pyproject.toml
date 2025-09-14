@@ -1,0 +1,42 @@
+[project]
+name = "chatbot"
+description = "chatbot"
+version = "0.0.1"
+authors = [
+    { name = "Fabio Pancino", email = "pancinofabio@gmail.com" },
+]
+readme = "README.md"
+requires-python = ">=3.10,<4.0"
+
+dependencies = [
+    "toml==0.10.*",
+    "uvicorn==0.30.6",
+    "requests==2.32.*",
+    "pydantic[email]",
+    "pydantic-settings",
+    "fastapi==0.115.*",
+    "beautifulsoup4==4.13.*",
+    "google-generativeai",
+    "llama-index==0.12.*",
+    "llama-index-llms-openai==0.4.*",
+    "llama-index-llms-google-genai==0.2.*",
+    "llama-index-llms-anthropic==0.7.*",
+    "llama-index-tools-duckduckgo==0.3.*",
+]
+
+[project.optional-dependencies]
+dev = [
+    "python-dotenv",
+    "ruff",
+    "types-pytz",
+    "types-requests",
+    "pytest",
+    "pytest-mock",
+]
+
+[build-system]
+requires = ["setuptools"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+where = ["src"]
