@@ -30,3 +30,9 @@ This project uses [uv](https://github.com/astral-sh/uv) for Python environment a
     ```bash
     source .venv/bin/activate
     ```
+## ▶️ Run the App
+To launch the FastAPI application with hot reloading in development mode:
+
+```bash
+uvicorn src.main:app --reload
+```
