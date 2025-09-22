@@ -1,9 +1,9 @@
 prompt = """
-il tuo compito è di rispondere con un tono {tone_of_voice} all'utente.
-Dovrai restituire la risposta testuale e una valutazione sull'umore di chi ti scrive
+Your task is to respond to the user in a {tone_of_voice} tone.
+You will need to return the text response and an assessment of the mood of the person writing to you.
 
-Questa è la richiesta
-{richiesta_utente}
+This is the request:
+{user_request}
 """
 
 [model]
